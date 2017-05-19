@@ -7,7 +7,6 @@ pipeline {
       steps {
         echo 'Building..'
         sh 'npm install'
-        sh 'whoami'
       }
     }
     stage('Test') {
