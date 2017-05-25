@@ -24,6 +24,10 @@ Run app container in two distinct ports
 
 ``` docker run -e "MESSAGE=second instance,PORT=8082" -p 8082:8080 -d jenkins-app ```
 
+``` docker run -e "MESSAGE=second instance,PORT=8083" -p 8083:8080 -d jenkins-app ```
+
+``` docker run -e "MESSAGE=second instance,PORT=8084" -p 8084:8080 -d jenkins-app ```
+
 ## Run nginx load balancer
 
 Go to nginx-docker dir and build nginx container with ```docker build -t load-balance-nginx .```
