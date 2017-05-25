@@ -14,7 +14,8 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node /usr/src/app/index.js"
   },
   "repository": {
     "type": "git",
