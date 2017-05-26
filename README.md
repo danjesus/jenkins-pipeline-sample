@@ -36,3 +36,11 @@ Run nginx container ```docker run -p 80:80 -d load-balance-nginx ```
 
 ## Test
 To test go to browser and access http://localhost or make a curl request via terminal like this ```curl -i localhost```.
+
+## Screenshots of jenkins pipeline
+
+Build successfully
+![Pipeline OK](screenshots/pipeline_ok.png)
+
+Build failing
+![Pipeline OK](screenshots/pipeline_fail.png)
