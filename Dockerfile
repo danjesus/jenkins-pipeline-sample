@@ -1,9 +1,15 @@
-FROM node:7.10
-RUN mkdir -p /usr/src/app
-COPY index.js /usr/src/app
-COPY package.json /usr/src/app
-ADD package.json /usr/src/app
-WORKDIR /usr/src/app
-RUN npm install
+FROM node:7.10-alpine
+
+ENV INSTALL_PATH /usr/src/app
+RUN mkdir -p $INSTALL_PATH
+
+COPY index.js $INSTALL_PATH
+COPY package.json $INSTALL_PATH
+ADD package.json $INSTALL_PATH
+
+WORKDIR $INSTALL_PATH
+RUN npm install --silent
+
 EXPOSE 8080
+
 CMD ["npm", "start"]
